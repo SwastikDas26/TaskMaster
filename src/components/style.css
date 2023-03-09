@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Roboto:wght@400;700&display=swap');
+
+*{
+    margin: 0;                
+    padding: 0;                                 
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+.Navbar {
+    height: 48px;
+    /* width: 672px;*/
+    margin-left: 16px;
+    margin-right: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Navbar .logo {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    color: #9333EA;
+}
+
+.Navbar .options ul{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.Navbar .options ul li {
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 2px;
+}
+
+.account .theme {
+    height: 18px;
+    width: 18px;
+    margin: 5px;
+}
+
+.account .profile {
+    height: 16px;
+    width: 16px;
+    margin: 5px;
+}
+
+
+
+.Sidebar .calender {
+    height: 20px;
+    width: 18px;
+    padding-right: 8px;
+}
+
+.Sidebar ul li {
+    height: 48px;
+    width: 185px;
+}
+
+.Sidebar #btn1 {
+    position: relative;
+    right: 50px;
+    /* padding-right: 5px; */
+}
+
+.Sidebar #today {
+    font-size: 16px;
+    position: relative;
+    top: -3px;
+    padding-left: 3px;
+    padding-right: 3px;
+}
