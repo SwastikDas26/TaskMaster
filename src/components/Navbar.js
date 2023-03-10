@@ -5,18 +5,18 @@ import Profile from "./profile.svg";
 
 function navbar() {
   return (
-    <div className='Navbar'>
-        <div className="logo">TaskMate</div>
+    <div className='flex justify-between h-12 ml-4 mr-4 px-5 items-center bg-white rounded w-full'>
+        <div className="text-logo cursor-pointer">TaskMate</div>
         <div className="options">
-            <ul>
-                <li><a href='/' className='Menubtn'>Todo</a></li>
-                <li><a href='/' className='Menubtn'>Project</a></li>
-                <li><a href='/' className='Menubtn'>Team</a></li>
+            <ul className='flex justify-around list-none'>
+                <li className='mx-3 px-3 cursor-pointer text-logo'>Todo</li>
+                <li className='mx-3 px-3 cursor-pointer'>Project</li>
+                <li className='mx-3 px-3 cursor-pointer'>Team</li>
             </ul>
         </div>
-        <div className="account">
-            <a href='/'><img src={Moon} alt="theme" className='theme'/></a>
-            <a href='/'><img src={Profile} alt="profile" className='profile'/></a>
+        <div className="flex">
+            <a href='/'><img src={Moon} alt="theme" className='h-5 w-5 mx-2'/></a>
+            <a href='/'><img src={Profile} alt="profile" className='h-5 w-5 mx-2'/></a>
         </div>
     </div>
   )
