@@ -12,12 +12,12 @@ const Sidebar = () => {
     return (
         <div className='h-full flex flex-col justify-between height'>
             <ul className='flex flex-col'>
-                <li className='h-10 w-44 flex items-center gap-2.5 p-2 bg-btn1 rounded text-btn2'><img src={calendar} alt='calender' className='h-4 w-4' />Today</li>
-                <li className='h-10 w-44 flex items-center gap-2.5 p-2 bg-btn1 rounded text-btn2'><img src={sun} alt='calender' className='h-4 w-4' />My Day</li>
-                <li className='h-10 w-44 flex items-center gap-2.5 p-2 bg-btn1 rounded text-btn2'><img src={important} alt='calender' className='h-4 w-4' />Important</li>
+                <li className='h-10 w-44 flex items-center gap-2.5 p-2 bg-btn1 rounded text-btn2 cursor-pointer'><img src={calendar} alt='calender' className='h-4 w-4' />Today</li>
+                <li className='h-10 w-44 flex items-center gap-2.5 p-2 bg-btn1 rounded text-btn2 cursor-pointer'><img src={sun} alt='calender' className='h-4 w-4' />My Day</li>
+                <li className='h-10 w-44 flex items-center gap-2.5 p-2 bg-btn1 rounded text-btn2 cursor-pointer'><img src={important} alt='calender' className='h-4 w-4' />Important</li>
             </ul>
             <ul>
-            <li className='h-10 w-44 flex items-center gap-2.5 p-2 bg-btn1 rounded text-btn2'><img src={setting} alt='calender' className='h-4 w-4' />Settings</li>
+            <li className='h-10 w-44 flex items-center gap-2.5 p-2 bg-btn1 rounded text-btn2 cursor-pointer'><img src={setting} alt='calender' className='h-4 w-4' />Settings</li>
             </ul>
         </div>
     )
