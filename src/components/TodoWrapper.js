@@ -13,7 +13,6 @@ uuidv4();
 export const TodoWrapper = () => {
 	const [todos, setTodos] = useState([]);
     const [showImportantOnly, setShowImportantOnly] = useState(false);
-    // const tasks;
 
     useEffect(() => {
         const savedTasks = JSON.parse(localStorage.getItem('todos'));
@@ -41,15 +40,15 @@ export const TodoWrapper = () => {
 
     const toggleComplete = (id) => {
         setTodos(todos.map(todo => todo.id === id ? {...todo, completed: !todo.completed} : todo));
-    }
+    };
 
     const deleteTodo = (id) => {
         setTodos(todos.filter(todo => todo.id !== id));
-    }
+    };
 
     const editTodo = (id) => {
         setTodos(todos.map(todo => todo.id === id ? {...todo, isEditing: !todo.isEditing} : todo));
-    }
+    };
 
     const editTask = (task, id) => {
         setTodos(todos.map(todo => todo.id === id ? {...todo, task, isEditing: !todo.isEditing} : todo));
@@ -63,32 +62,32 @@ export const TodoWrapper = () => {
         setShowImportantOnly(true);
     };
     
-    const filteredTasks = showImportantOnly ? todos.filter((todo) => todo.important) : todos;
+    const filteredTasks = showImportantOnly ? todos.filter(todos => todos.important) : todos;
 
 	return (
-        <div className="flex ">
-        <div className='h-full flex flex-col justify-between height'>
-            <ul className='flex flex-col'>
-                <li className='h-10 w-44 flex items-center gap-2.5 p-2 bg-btn1 rounded text-btn2 cursor-pointer'><img src={calendar} alt='calender' className='h-4 w-4' onClick={handleShowAll}/>Today</li>
-                <li className='h-10 w-44 flex items-center gap-2.5 p-2 bg-btn1 rounded text-btn2 cursor-pointer'><img src={sun} alt='calender' className='h-4 w-4' onClick={handleShowAll}/>My Day</li>
-                <li className='h-10 w-44 flex items-center gap-2.5 p-2 bg-btn1 rounded text-btn2 cursor-pointer'><img src={important} alt='calender' className='h-4 w-4' onClick={handleShowImportantOnly}/>Important</li>
-            </ul>
-            <ul>
-            <li className='h-10 w-44 flex items-center gap-2.5 p-2 bg-btn1 rounded text-btn2 cursor-pointer'><img src={setting} alt='calender' className='h-4 w-4' />Settings</li>
-            </ul>
-        </div>
-		<div className="TodoWrapper">
-            <div className="min-height">
-            {filteredTasks.map((todo, index) => (
-                todo.isEditing ? (
-                    <EditTodoForm editTodo={editTask} task={todo} />
-                ) : (
-                <Todo task={todo} key={index} toggleComplete={toggleComplete} deleteTodo={deleteTodo} editTodo={editTodo} />
-                )
-            ))}
+        <div className="flex min-h-[520px]">
+            <div className='flex flex-col justify-between min-h-[520px] mt-20'>
+                <ul className='flex flex-col'>
+                    <li className='h-10 w-44 flex items-center gap-2.5 p-2 bg-btn1 rounded text-btn2 cursor-pointer'><img src={calendar} alt='calender' className='h-4 w-4' onClick={handleShowAll}/>Today</li>
+                    <li className='h-10 w-44 flex items-center gap-2.5 p-2 bg-btn1 rounded text-btn2 cursor-pointer'><img src={sun} alt='calender' className='h-4 w-4' onClick={handleShowAll}/>My Day</li>
+                    <li className='h-10 w-44 flex items-center gap-2.5 p-2 bg-btn1 rounded text-btn2 cursor-pointer'><img src={important} alt='calender' className='h-4 w-4' onClick={handleShowImportantOnly}/>Important</li>
+                </ul>
+                <ul>
+                    <li className='h-10 w-44 flex items-center gap-2.5 p-2 bg-btn1 rounded text-btn2 cursor-pointer'><img src={setting} alt='calender' className='h-4 w-4' />Settings</li>
+                </ul>
             </div>
-            <TodoForm addTodo={addTodo} />
-		</div>
+            <div className="bg-white mt-20 rounded-md p-8">
+                <div className="min-h-[50vh]">
+                {filteredTasks.map((todo, index) => (
+                    todo.isEditing ? (
+                        <EditTodoForm editTodo={editTask} task={todo} />
+                    ) : (
+                    <Todo task={todo} key={index} toggleComplete={toggleComplete} deleteTodo={deleteTodo} editTodo={editTodo} />
+                    )
+                ))}
+                </div>
+                <TodoForm addTodo={addTodo} />
+            </div>
         </div>
 	);
 };

@@ -20,10 +20,10 @@ export const TodoForm = ({ addTodo }) => {
 	}
 
 	return (
-			<form className="TodoForm" onSubmit={handleSubmit}>
+			<form className="w-full" onSubmit={handleSubmit}>
 				<input
 					type="text"
-					className="todo-input"
+					className="outline-none bg-[#f3f3f3] px-4 py-2 border-[1px] border-solid border-[#8758ff] mt-4 mb-8 w-[300px]"
 					value={value}
 					placeholder="What is the task today?"
 					onChange={(e) => setValue(e.target.value)}
@@ -35,7 +35,7 @@ export const TodoForm = ({ addTodo }) => {
 					onChange={handleImportantChange}
 				/>
 				<label htmlFor="important" className="impLabel">Important</label>
-				<button type="submit" className="todo-btn">Add Task</button>
+				<button type="submit" className="bg-[#f2edf2] text-[#404040] border-0 p-[8.8px] cursor-pointer">Add Task</button>
 			</form>
 	);
 };
