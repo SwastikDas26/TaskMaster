@@ -1,5 +1,5 @@
 # It is deployed in Vercel
-It can be viewed on[Task Mate](https://task-mate-three.vercel.app).
+It can be viewed on [Task Mate](https://task-mate-three.vercel.app).
 
 # Getting Started with Create React App
 
