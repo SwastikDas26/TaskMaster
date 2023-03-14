@@ -1,3 +1,6 @@
+# It is deployed in Vercel
+It can be viewed on[Task Mate](https://task-mate-three.vercel.app).
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
