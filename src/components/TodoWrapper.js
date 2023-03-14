@@ -65,19 +65,19 @@ export const TodoWrapper = () => {
     const filteredTasks = showImportantOnly ? todos.filter(todos => todos.important) : todos;
 
 	return (
-        <div className="flex min-h-[520px]">
-            <div className='flex flex-col justify-between min-h-[520px] mt-20'>
-                <ul className='flex flex-col'>
-                    <li className='h-10 w-44 flex items-center gap-2.5 p-2 bg-btn1 rounded text-btn2 cursor-pointer'><img src={calendar} alt='calender' className='h-4 w-4' onClick={handleShowAll}/>Today</li>
-                    <li className='h-10 w-44 flex items-center gap-2.5 p-2 bg-btn1 rounded text-btn2 cursor-pointer'><img src={sun} alt='calender' className='h-4 w-4' onClick={handleShowAll}/>My Day</li>
-                    <li className='h-10 w-44 flex items-center gap-2.5 p-2 bg-btn1 rounded text-btn2 cursor-pointer'><img src={important} alt='calender' className='h-4 w-4' onClick={handleShowImportantOnly}/>Important</li>
-                </ul>
+        <div className="flex min-h-[520px] max-[520px]:flex-col">
+            <div className='flex flex-col justify-between min-[520px]:min-h-[520px] mt-20 max-[520px]:flex-row'>
+                <div className='flex flex-col max-[520px]:flex-row max-[520px]:justify-center max-[520px]:items-center'>
+                    <button type="button" className='h-10 xl:w-44 lg:w-32 max-[520px]:text-[12px] flex items-center gap-2.5 p-2 bg-btn1 rounded text-btn2 cursor-pointer'><img src={calendar} alt='calender' className='h-4 w-4' onClick={handleShowAll}/>Today</button>
+                    <button type="button" className='h-10 xl:w-44 lg:w-32 max-[520px]:text-[12px] flex items-center gap-2.5 p-2 bg-btn1 rounded text-btn2 cursor-pointer'><img src={sun} alt='calender' className='h-4 w-4' onClick={handleShowAll}/>My Day</button>
+                    <button type="button" className='h-10 xl:w-44 lg:w-32 max-[520px]:text-[12px] flex items-center gap-2.5 p-2 bg-btn1 rounded text-btn2 cursor-pointer'><img src={important} alt='calender' className='h-4 w-4' onClick={handleShowImportantOnly}/>Important</button>
+                </div>
                 <ul>
-                    <li className='h-10 w-44 flex items-center gap-2.5 p-2 bg-btn1 rounded text-btn2 cursor-pointer'><img src={setting} alt='calender' className='h-4 w-4' />Settings</li>
+                    <li className='h-10 xl:w-44 lg:w-32 max-[520px]:text-[12px] max-[398px]:hidden flex items-center gap-2.5 p-2 bg-btn1 rounded text-btn2 cursor-pointer'><img src={setting} alt='calender' className='h-4 w-4' />Settings</li>
                 </ul>
             </div>
-            <div className="bg-white mt-20 rounded-md p-8">
-                <div className="min-h-[50vh]">
+            <div className="bg-white min-[520px]:mt-20 rounded-md p-8 max-[1025px]:w-[375px] max-[398px]:w-[350px] max-[370px]:w-[320px]">
+                <div className="min-h-[400px]">
                 {filteredTasks.map((todo, index) => (
                     todo.isEditing ? (
                         <EditTodoForm editTodo={editTask} task={todo} />
