@@ -4,84 +4,6 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Roboto:wght@400;700&display=swap");
 
-/*
-*{
-    margin: 0;                
-    padding: 0;                                 
-    box-sizing: border-box;
-    text-decoration: none;
-}
-
-.Navbar {
-    height: 48px;
-    /* width: 672px;
-    margin-left: 16px;
-    margin-right: 16px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.Navbar .logo {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 700;
-    font-size: 20px;
-    color: #9333EA;
-}
-
-.Navbar .options ul{
-    display: flex;
-    justify-content: space-between;
-    list-style: none;
-}
-
-.Navbar .options ul li {
-    margin-left: 10px;
-    margin-right: 10px;
-    padding: 2px;
-    cursor: pointer;
-}
-
-.account .theme {
-    height: 18px;
-    width: 18px;
-    margin: 5px;
-}
-
-.account .profile {
-    height: 16px;
-    width: 16px;
-    margin: 5px;
-}
-
-
-
-.Sidebar .calender {
-    height: 20px;
-    width: 18px;
-    padding-right: 8px;
-}
-
-.Sidebar ul li {
-    height: 48px;
-    width: 185px;
-}
-
-.Sidebar #btn1 {
-    position: relative;
-    right: 50px;
-    /* padding-right: 5px;
-}
-
-.Sidebar #today {
-    font-size: 16px;
-    position: relative;
-    top: -3px;
-    padding-left: 3px;
-    padding-right: 3px;
-}
-*/
-
 body {
 	background: linear-gradient(299.75deg, #b9d5ff 0%, #f6d1fc 98.93%);
 	display: flex;
@@ -93,61 +15,9 @@ body {
 	text-align: center;
 }
 
-/* h1 {
-	color: #fff;
-	margin-bottom: 0.5rem;
-	font-size: 1.75rem;
-} */
-
-/* .TodoWrapper {
-	background: white;
-	margin-top: 5rem;
-	padding: 2rem;
-	border-radius: 5px;
-} */
-
-/* .TodoForm {
-	width: 100%;
-} */
-
-/* .todo-input {
-	outline: none;
-	background: #f3f3f3;
-	border: 1px solid #8758ff;
-	padding: 0.5rem 1rem;
-	margin-top: 1rem;
-	margin-bottom: 2rem;
-	width: 300px;
-	color: rgba(64, 64, 64, 1);
-} */
-
 .todo-input::placeholder {
 	color: #240b0b4d;
 }
-
-/* .todo-btn {
-	background: #f2edf2;
-	color: rgba(64, 64, 64, 1);
-	border: none;
-	padding: 0.55rem;
-	cursor: pointer;
-} */
-
-/* .min-height {
-	min-height: 50vh;
-} */
-
-/* .Todo {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	background: #f2edf2;
-	color: rgba(64, 64, 64, 1);
-	padding: 0.75rem 1rem;
-	border-radius: 5px;
-	margin-bottom: 1rem;
-	cursor: pointer;
-} */
 
 .fa-trash {
 	margin-left: 0.75rem;
