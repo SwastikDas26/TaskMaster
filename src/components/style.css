@@ -1,76 +1,50 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Roboto:wght@400;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-*{
-    margin: 0;                
-    padding: 0;                                 
-    box-sizing: border-box;
-    text-decoration: none;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Roboto:wght@400;700&display=swap");
+
+body {
+	background: linear-gradient(299.75deg, #b9d5ff 0%, #f6d1fc 98.93%);
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
-.Navbar {
-    height: 48px;
-    /* width: 672px;*/
-    margin-left: 16px;
-    margin-right: 16px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.App {
+	text-align: center;
 }
 
-.Navbar .logo {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 700;
-    font-size: 20px;
-    color: #9333EA;
+.todo-input::placeholder {
+	color: #240b0b4d;
 }
 
-.Navbar .options ul{
-    display: flex;
-    justify-content: space-between;
-    list-style: none;
+.fa-trash {
+	margin-left: 0.75rem;
 }
 
-.Navbar .options ul li {
-    margin-left: 10px;
-    margin-right: 10px;
-    padding: 2px;
+.completed {
+	color: #c5aeff;
+	text-decoration: line-through;
 }
 
-.account .theme {
-    height: 18px;
-    width: 18px;
-    margin: 5px;
+.height {
+	min-height: 519.2px;
+	margin-top: 80px;
 }
 
-.account .profile {
-    height: 16px;
-    width: 16px;
-    margin: 5px;
+#important {
+	height: 20px;
+	width: 20px;
+	margin: 0 10px;
 }
 
-
-
-.Sidebar .calender {
-    height: 20px;
-    width: 18px;
-    padding-right: 8px;
+.impLabel {
+	position: relative;
+	bottom: 4px;
+	margin-right: 12px;
 }
 
-.Sidebar ul li {
-    height: 48px;
-    width: 185px;
-}
-
-.Sidebar #btn1 {
-    position: relative;
-    right: 50px;
-    /* padding-right: 5px; */
-}
-
-.Sidebar #today {
-    font-size: 16px;
-    position: relative;
-    top: -3px;
-    padding-left: 3px;
-    padding-right: 3px;
+.date {
+	font-size: 10px;
 }
